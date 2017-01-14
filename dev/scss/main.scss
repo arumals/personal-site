@@ -3,53 +3,71 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.css");
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 header{
 	background: #000;
 	color: #fff;
 	margin: 0;
-	padding: 20px 0 10px;
+	padding: 20px 0p 10px;
 	width: 100%;
 	position: relative;
 
 	h1 {
 		color: inherit;
-		max-width: 800px;
-		padding: 0 20px;
-		margin: 30px auto 0;
+		padding: 60px 20px 0;
+		margin: 0 auto 5px;
+		max-width: 1024px;
 	}
 
 	.position {
-		max-width: 800px;
-		margin: 5px auto 0;
 		color: #2196F3;
 		position: relative;
-		padding: 0 20px;
+		margin: 0 auto;
+		max-width: 1024px;
+		padding: 0 20px 10px;
 
 		#avatar {
 			position: absolute;
 			top: 20px;
-			right: 30px;
-			top: -20px;
+			right: 20px;
+			top: -15px;
 
 			img {
 				transform: rotate(-33deg);
 				right: 140px;
-				width: 120px;
+				width: 90px;
 				border-radius: 50%;
 				box-shadow: 3px 10px 10px -6px rgba(0,0,0,0.44);
+
+				@media screen and (min-width:1024px){
+					width: 150px;
+				}
 			}
 		}
 
 		#mail {
 			font-size: 20px;
-			bottom: 5px;
-			left: 80px;
+			bottom: 0;
+			left: 55px;
 			position: absolute;
 			border-radius: 50%;
 			background: #2196F3;
-			padding: 15px;
+			padding: 10px;
 			opacity: .7;
 			box-shadow: 3px 10px 10px -6px rgba(0,0,0,0.44);
+
+			@media screen and (min-width:1024px){
+				font-size: 25px;
+				padding: 15px;
+				left: 90px;
+			}
 
 			&:hover {
 				transition: opacity 0.5s ease;
@@ -81,16 +99,36 @@ body {
 	color: #fff;
 }
 
-ul.content {
+.content {
+	margin: 70px auto 20px;
+	max-width: 1024px;
 
-	padding: 50px 20px 20px;
-	max-width: 800px;
-	margin: 0 auto;
+	@media screen and (min-width:1024px){
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+ul.main-content {
 
 	> li {
-		margin: 40px 0 0 0;
+		margin: 40px 20px 0;
 	}
 
+	@media screen and (min-width: 1024px){
+		width: 65%;
+	}
+}
+
+ul.side-content {
+
+	> li {
+		margin: 40px 20px 0;
+	}
+
+	@media screen and (min-width:1024px){
+		width: 30%;
+	}
 }
 
 .content-block {
@@ -144,18 +182,24 @@ ul.content {
 		display: flex;
 		justify-content: space-between;
 
+		@media screen and (min-width: 768px){
+			width: auto;
+		}
+
 		a {
 			color: inherit;
 		}
 
 		.name {
 			color: #D1C4E9;
-			margin: 0 5px 0 0;
 			opacity: 1;
+
+			@media screen and (min-width: 768px){
+				margin-right: 10px;
+			}
 		}
 
 		.position {
-			margin: 0 5px 0 0;
 		}
 
 	}
@@ -163,6 +207,10 @@ ul.content {
 	.date {
 		width: 100%;
 		text-align: right;
+
+		@media screen and (min-width: 768px){
+			width: auto;
+		}
 	}
 }
 
