@@ -215,7 +215,7 @@ body {
 			font-size: 16px;
 			list-style-type: none;
 			padding: 0;
-			margin: 5px 0;
+			margin: 15px 0;
 			line-height: 120%;
 
 			&:first-child {
@@ -236,6 +236,7 @@ body {
 		justify-content: space-between;
 		color: #64B5F6;
 		padding: 0 0 10px;
+		margin: 0 0 40px;
 		border-bottom: 1px dashed #64B5F6;
 
 		.company {
@@ -291,6 +292,37 @@ body {
 			opacity: 1;
 			font-size: 30px;
 			margin: 0 0 0 5px;
+		}
+	}
+
+	.client-list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		li {
+			width: 	33%;
+			height: 100%;
+			margin: 0;
+
+			a {
+				color: #999;
+
+				&:hover{
+					color: #42A5F5;
+				}
+
+				.fa {
+					width: 25px;
+				}
+			}
+		}
+	}
+
+	.list-style-3 {
+		li {
+			margin: 0 0 5px;
+			color: #999;
 		}
 	}
 
