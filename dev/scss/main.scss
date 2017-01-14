@@ -170,7 +170,7 @@ ul.side-content {
 .position-details {
 	font-size: 18px;
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
 	flex-wrap: wrap;
 	color: #64B5F6;
 	padding: 0 0 10px;
@@ -179,36 +179,34 @@ ul.side-content {
 
 	.company {
 		width: 100%;
-		display: flex;
-		justify-content: space-between;
-
-		@media screen and (min-width: 768px){
-			width: auto;
-		}
+		color: #D1C4E9;
 
 		a {
 			color: inherit;
 		}
 
-		.name {
-			color: #D1C4E9;
-			opacity: 1;
-
-			@media screen and (min-width: 768px){
-				margin-right: 10px;
-			}
+		@media screen and (min-width: 568px){
+			width: auto;
+			margin-right: 5px;
 		}
+	}
 
-		.position {
+	.position {
+		width: 100%;
+		margin: 5px 0;
+
+		@media screen and (min-width: 568px){
+			width: auto;
+			margin-right: 5px;
 		}
-
 	}
 
 	.date {
 		width: 100%;
-		text-align: right;
+		color: #64B5F6;
+		opacity: .6;
 
-		@media screen and (min-width: 768px){
+		@media screen and (min-width: 568px){
 			width: auto;
 		}
 	}
@@ -288,6 +286,14 @@ li {
 			.fa {
 				width: 25px;
 			}
+		}
+
+		@media screen and (min-width: 568px){
+			width: 50%;
+		}
+
+		@media screen and (min-width: 1024px){
+			width: 30%;
 		}
 	}
 }
