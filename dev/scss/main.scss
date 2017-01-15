@@ -203,13 +203,11 @@ li {
 		margin: 5px 0;
 
 		.name {
-			width: 70%;
+			width: auto;
 		}
 
 		.level {
-			width: 30%;
-			display: flex;
-			justify-content: space-between;
+			width: auto;
 		}
 	}
 }
@@ -372,4 +370,21 @@ ul.education {
 
 blockquote {
 	font-style: italic;
+}
+
+.education.list-style-4 {
+	border-bottom: 0;
+
+	> li {
+		margin-bottom: 10px;
+		font-size: 16px;
+
+		> div {
+			margin: 0;
+		}
+
+		.text-2,.text-3 {
+			font-size: 14px;
+		}
+	}
 }
