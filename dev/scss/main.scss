@@ -1,5 +1,5 @@
 @import "_reset.scss";
-@import url('https://fonts.googleapis.com/css?family=Redressed|Redressed|Questrial');
+@import url('https://fonts.googleapis.com/css?family=Neucha|Questrial|Amita');
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.css");
 
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    font-family: Questrial, Helvetica, Arial, Verdana;
+    font-family: Neucha, Helvetica, Arial, Verdana;
 }
 
 *,
@@ -308,7 +308,7 @@ li {
 }
 
 .text-1,.text-2,.text-3 {
-    font-family: Redressed, sans-serif;
+    font-family: Neucha, sans-serif;
     line-height: 100%;
 }
 
@@ -353,7 +353,7 @@ li {
 }
 
 p {
-    margin: 10px 0 0;
+    margin: 0 0 10px;
 }
 
 a {
@@ -362,7 +362,11 @@ a {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: Redressed, sans-serif;
+    font-family: Neucha, sans-serif;
+}
+
+h1,h2 {
+    font-family: Amita, sans-serif;
 }
 
 h1 {
