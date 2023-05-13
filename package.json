@@ -4,13 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pug src -o dist"
+    "clean:cache": "rimraf public/css/main.css public/js/main.js public/index.html",
+    "build:pug": "pug src/pug/index.pug -o ./public/",
+    "build:sass": "pnpm node-sass src/scss/main.scss public/css/main.css --output-style=compressed",
+    "watch:pug": "pug src/pug/index.pug -o ./public -w",
+    "watch:sass": "node-sass src/scss/main.scss public/css/main.css --output-style=compressed -w",
+    "build": "pnpm clean:cache && pnpm build:pug && pnpm build:sass"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node-sass": "^8.0.0",
     "pug": "^3.0.2",
-    "pug-cli": "1.0.0-alpha6"
+    "pug-cli": "1.0.0-alpha6",
+    "rimraf": "^5.0.0"
   }
 }
