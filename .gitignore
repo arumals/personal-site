@@ -1,4 +1,4 @@
-config.codekit3
-prepros-6.config
-public
-.DS_Store
+public/css
+public/index.html
+public/js
+node_modules
