@@ -1,0 +1,52 @@
+doctype html
+html
+
+  head
+
+    title Arturo Maltos (Developer)
+
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+    link(rel="stylesheet" href="/css/main.css")
+
+    meta(charset="utf8")
+    meta(name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1")
+
+    script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-NR716B54E3')
+
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NR716B54E3');
+
+
+body
+
+  header
+    include includes/header
+
+  .content
+
+    ul.main-content
+
+      li.work-experience
+        include includes/experience
+
+      li.education
+        include includes/education
+
+      li.courses
+        include includes/courses
+
+    ul.side-content
+
+      li.contact
+        include includes/contact
+
+      li.idioms
+        include includes/idioms
+
+      li.cursos
+        include includes/skills
+
+

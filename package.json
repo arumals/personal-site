@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean:cache": "rimraf public/css/main.css public/js/main.js public/index.html",
-    "build:pug": "pug src/pug/index.pug -o ./public/",
-    "build:sass": "pnpm node-sass src/scss/main.scss public/css/main.css --output-style=compressed",
-    "watch:pug": "pug src/pug/index.pug -o ./public -w",
-    "watch:sass": "node-sass src/scss/main.scss public/css/main.css --output-style=compressed -w",
-    "build": "pnpm clean:cache && pnpm build:pug && pnpm build:sass"
+    "cc": "rimraf public/css public/js/main.js public/en public/es",
+    "sass:build": "pnpm node-sass src/scss/main.scss public/css/main.css --output-style=compressed",
+    "pug:build": "pug src/es/index.pug -o ./public/es/ && pug src/en/index.pug -o ./public/en/",
+    "watch": "pnpm cc && pnpm sass:build && concurrently --kill-others \"node-sass src/scss/main.scss public/css/main.css --output-style=compressed -w\" \"pug src/es/index.pug -o ./public/es/ -w\" \"pug src/en/index.pug -o ./public/en/ -w\"",
+    "build": "pnpm cc && pnpm pug:build && pnpm sass:build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^8.0.1",
     "node-sass": "^8.0.0",
     "pug": "^3.0.2",
     "pug-cli": "1.0.0-alpha6",
